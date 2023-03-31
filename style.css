@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: #000;
+   color: #fff;
+   width: 100%;
+}
+
+/* ######## Header ######## */
+.header{
+    width: 100%;
+    height: 80vh;
+    padding: 25px 3%;     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("assets/header-image.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-bottom: 8px solid #222;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons .btn {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    font-weight: 400;
+    padding: 4px 15px;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lng {
+    display: inline-flex;
+    background: transparent;
+    padding: 7px 10px;
+    border: 1px solid #777;
+    font-size: 14px;
+    color: #fff;
+}
+
+.lng img {
+    width: 12px;
+    height: 6px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+/* ------ Content ------ */
+
+.content {
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content h1 {
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
+.content h3 {
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 27px;
+    text-align: center;
+}
+
+.content h4 {
+    font-weight: 400; 
+    font-size: 20px;
+    text-align: center;
+}
+
+.email-sign {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 10px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.email-sign input {
+    flex: 1;
+    border: 1px solid #555;
+    outline: 0;
+    padding: 20px 0 20px 16px;
+    background: transparent;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.email-sign button {
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 17px 30px;
+    margin-left: 8px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* ######## Features ######## */
+.features {
+    padding: 25px 3%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 8px solid #222;
+}
+
+.text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.text-col h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.text-col p {
+    font-size: 24px;
+}
+.img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.ccc {
+    margin-top: 15px;
+}
+
+/* ######## Faq section ######## */
+.faq {
+    padding: 5px 2%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.accordion {
+    margin: 5px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+li .content {
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 20px;
+}
+.zzz {
+    margin-top: 20px;
+}
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion label {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    font-size: 20px;
+    font-weight: 300;
+    background: #303030;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.7s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content-1 {
+    background: #303030;
+    text-align: left;
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content-1 {
+    max-height: 600px;
+    padding: 15px 15px;
+}
+
+.accordion input[type="radio"]:checked   
+ + label::after {
+     transform: rotate(135deg);
+ }
+ 
+.faq .email-sign {
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+ 
+.faq small {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+/* ########### Footer ########### */
+.footer {
+    padding: 10px 4% 10px 4%;
+    border-top: 8px solid #222;
+    color: #999;
+}
+
+.footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.footer .col {
+    flex-basis: 33%;
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+
+.footer .col a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 13px;
+    font-weight: 500;
+}
+
+.footer .col a:hover {
+    color: #db0001;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0 0 0;
+    border-bottom: 0;
+}
+
+.footer .lng {
+    color: #fff;
+    padding: 7px 10px;
+    border: 1px solid #777;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.copyright-txt {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+    
+}
+
+/* --Media Query For Small Screen -- */
+@media(max-width: 768px){
+    
+    /* Header */
+    .header {
+        height: 100vh;
+    }
+    
+    .logo {
+        width: 80px;
+        cursor: pointer;
+    }
+    
+    .buttons .btn {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 4px;
+    }
+    
+    .lng {
+        border-radius: 4px;
+    }
+    /* Header Content */
+    .content h1 {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 0;
+    }
+    
+    .content h3 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .email-sign {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .email-sign input {
+        padding: 10px 0 10px 8px;
+        width: 320px;
+        margin: 20px 0;
+    }
+    
+    .email-sign button {
+        font-size: 18px;
+        padding: 10px 22px;
+    }
+    /* Features */
+    .row-2 {
+        flex-flow: column-reverse;
+    }
+    
+    .img-col {
+        flex-basis: 100%;
+    }
+    
+    .text-col {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .text-col h2 {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .text-col p {
+        font-size: 18px;
+    }
+    
+    .accordion label {
+        padding: 20px 20px;
+    }
+    
+    .email-sign input {
+       margin-top: 0;
+       padding: 18px 0 18px 16px;
+    }
+    
+    /* footer */
+    .footer h2 {
+       font-size: 17px;
+    }
+    
+    .footer .col {
+        flex-basis: 100%;
+    }
+}
+
